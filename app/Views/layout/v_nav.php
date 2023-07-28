@@ -17,10 +17,15 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href="<?= route_to('manual'); ?>">
+          <a href="<?= route_to('profil'); ?>">
+            <i class="fa fa-user"></i> <span>Profil</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= route_to('kendaraan/create'); ?>">
             <i class="fa fa-motorcycle"></i> <span>Manual Parkir</span>
           </a>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-file"></i> <span>Laporan</span>
             <span class="pull-right-container">
@@ -31,19 +36,14 @@
             <li><a href="<?= route_to('gerbang1'); ?>"><i class="fa fa-circle-o"></i> Gerbang 1</a></li>
             <li><a href="<?= route_to('gerbang2'); ?>"><i class="fa fa-circle-o"></i> Gerbang 2</a></li>
           </ul>
-        </li>
-        <li>
-          <a href="<?= route_to('profil'); ?>">
-            <i class="fa fa-user"></i> <span>Profil</span>
-          </a>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <a href="<?= route_to('parkir'); ?>">
             <i class="fa fa-motorcycle"></i> <span>Parkir</span>
           </a>
-        </li>
+        </li> -->
         <li>
-          <a href="<?= route_to('laporan'); ?>">
+          <a href="<?= route_to('kendaraan'); ?>">
             <i class="fa fa-file"></i> <span>Laporan</span>
           </a>
         </li>

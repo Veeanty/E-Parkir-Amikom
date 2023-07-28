@@ -32,7 +32,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="../../index2.html"><b>Register </b>E-Parkir</a>
+            <a href="../../index2.html"><b>Login </b>E-Parkir</a>
         </div>
 
         <div class="register-box-body">
@@ -51,7 +51,7 @@
             <?php endif ?>
             <?php
             if (session()->getFlashdata('pesan')) {
-                echo '<div class="alert alert-success" role="alert">';
+                echo '<div class="alert alert-danger" role="alert">';
                 echo session()->getFlashdata('pesan');
                 echo '</div>';
             }
@@ -60,18 +60,10 @@
 
 
             <?php
-            echo form_open('auth/save_register');
+            echo form_open('auth/cek_login');
             ?>
             <div class="form-group has-feedback">
-                <input name="nama_user" class="form-control" placeholder="Nama User">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
                 <input type="email" name="email" class="form-control" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input name="no_hp" class="form-control" placeholder="No Handphone">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
@@ -90,7 +82,7 @@
                 <!-- /.col -->
             </div>
 
-            <a href="<?= base_url('auth/login') ?>" class="text-center">Kembali ke Login</a>
+            <a href="<?= base_url('auth/register') ?>" class="text-center">Belum punya AKun? Redgister</a>
         </div>
 
         <!-- /.register-box -->

@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Web');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,12 +29,19 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Web::index');
 
 $routes->get('/register', 'Auth::register');
-$routes->get('/Auth/register', 'Auth::register');
+$routes->get('auth/logout', 'Auth::logout');
+$routes->get('/login', 'Auth::login');
+$routes->post('login', 'Auth::cek_login');
+$routes->post('auth/cek_login', 'Auth::cek_login');
+$routes->get('/auth/register', 'Auth::register');
+$routes->get('/auth/login', 'Auth::login');
 $routes->post('/auth/save_register', 'Auth::save_register');
 $routes->get('/sukses', 'Auth::register'); // Ganti 'Auth::sukses' dengan metode dan controller yang sesuai
+$routes->get('/login', 'Auth::login');
+$routes->get('/home', 'Home::index');
 
 //register
 // $routes->get('/register', 'RegisterController::index');
@@ -48,6 +55,12 @@ $routes->get('gerbang2', 'Gerbang2Controller::index', ['as' => 'gerbang2']);
 $routes->get('laporan', 'LaporanController::index', ['as' => 'laporan']);
 
 
+$routes->get('/kendaraan', 'KendaraanController::index');
+$routes->get('/kendaraan/create', 'KendaraanController::create');
+$routes->post('/kendaraan/store', 'KendaraanController::store');
+$routes->get('/kendaraan/edit/(:num)', 'KendaraanController::edit/$1');
+$routes->post('/kendaraan/update/(:num)', 'KendaraanController::update/$1');
+$routes->get('/kendaraan/delete/(:num)', 'KendaraanController::delete/$1');
 
 
 
