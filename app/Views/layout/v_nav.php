@@ -17,7 +17,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href="../widgets.html">
+          <a href="<?= route_to('manual'); ?>">
             <i class="fa fa-motorcycle"></i> <span>Manual Parkir</span>
           </a>
         <li class="treeview">
@@ -28,22 +28,22 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Gerbang 1</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Gerbang 2</a></li>
+            <li><a href="<?= route_to('gerbang1'); ?>"><i class="fa fa-circle-o"></i> Gerbang 1</a></li>
+            <li><a href="<?= route_to('gerbang2'); ?>"><i class="fa fa-circle-o"></i> Gerbang 2</a></li>
           </ul>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="<?= route_to('profil'); ?>">
             <i class="fa fa-user"></i> <span>Profil</span>
           </a>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="<?= route_to('parkir'); ?>">
             <i class="fa fa-motorcycle"></i> <span>Parkir</span>
           </a>
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="<?= route_to('laporan'); ?>">
             <i class="fa fa-file"></i> <span>Laporan</span>
           </a>
         </li>
@@ -59,7 +59,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-            <?=$title ?>
+        <?= $title ?>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -68,5 +68,5 @@
       </ol>
     </section>
 
-        <!-- Main content -->
-        <section class="content">
+    <!-- Main content -->
+    <section class="content">

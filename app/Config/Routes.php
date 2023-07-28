@@ -31,6 +31,28 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/register', 'Auth::register');
+$routes->get('/Auth/register', 'Auth::register');
+$routes->post('/auth/save_register', 'Auth::save_register');
+$routes->get('/sukses', 'Auth::register'); // Ganti 'Auth::sukses' dengan metode dan controller yang sesuai
+
+//register
+// $routes->get('/register', 'RegisterController::index');
+// $routes->post('/register', 'RegisterController::store');
+
+$routes->get('parkir', 'ParkirController::index', ['as' => 'parkir']);
+$routes->get('profil', 'ProfilController::index', ['as' => 'profil']);
+$routes->get('manual', 'ManualController::index', ['as' => 'manual']);
+$routes->get('gerbang1', 'Gerbang1Controller::index', ['as' => 'gerbang1']);
+$routes->get('gerbang2', 'Gerbang2Controller::index', ['as' => 'gerbang2']);
+$routes->get('laporan', 'LaporanController::index', ['as' => 'laporan']);
+
+
+
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
